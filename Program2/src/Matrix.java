@@ -15,7 +15,7 @@ public class Matrix {
         }
         String action = kb.next();
         if (action.equalsIgnoreCase("t")) {
-            transpose(Matrix);
+            transpose(Matrix, rows, columns);
         } else {}
         if (action.equalsIgnoreCase("r")) {
             multiply(Matrix);
@@ -26,9 +26,19 @@ public class Matrix {
         else{}
         action = kb.next();
     }
-
-    public static void transpose(int[][] Matrix){
-
+    public static void transpose(int[][] Matrix, int rows, int columns){
+        int newMatrix[][] = new int[columns][rows];
+        for (int j = 0; j < Matrix.length; j++) {
+            for (int i = 0; i < Matrix[0].length; i++) {
+                newMatrix[i][j] = Matrix [j][i];
+            }
+        }
+        for (int j = 0; j < newMatrix.length; j++) {
+            for (int i = 0; i < newMatrix[0].length; i++) {
+                System.out.print(newMatrix[j][i]+" ");
+            }
+            System.out.println();
+        }
     }
     public static void multiply(int[][] Matrix){
         int product = 1;
