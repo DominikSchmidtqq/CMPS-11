@@ -14,19 +14,19 @@ public class Matrix {
             }
         }
         String action = kb.next();
-        while ((!action.equalsIgnoreCase("q"))) {
-            try {
-                if (action.equalsIgnoreCase("t")) {
-                    transpose(Matrix);
-                } else if (action.equalsIgnoreCase("r")) {
-                    multiply(Matrix);
-                } else if (action.equalsIgnoreCase("c")) {
-                    minimum(Matrix);
-                }
-                action = kb.next();
-            }catch (Exception e){}
+        if (action.equalsIgnoreCase("t")) {
+            transpose(Matrix);
+        } else {}
+        if (action.equalsIgnoreCase("r")) {
+            multiply(Matrix);
+        } else{}
+        if (action.equalsIgnoreCase("c")) {
+            minimum(Matrix);
         }
+        else{}
+        action = kb.next();
     }
+
     public static void transpose(int[][] Matrix){
 
     }
@@ -41,6 +41,15 @@ public class Matrix {
         }
     }
     public static void minimum(int[][] Matrix){
-
+        int minimum = Integer.MAX_VALUE;
+        for (int i = 0; i < Matrix[0].length; i++) {
+            for (int j = 0; j < Matrix.length; j++) {
+                if(minimum> Matrix[j][i]){
+                    minimum = Matrix[j][i];
+                }
+            }
+            System.out.print(minimum+" ");
+            minimum = Integer.MAX_VALUE;
+        }
     }
 }
