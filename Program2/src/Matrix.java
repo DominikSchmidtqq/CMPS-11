@@ -13,5 +13,34 @@ public class Matrix {
                 Matrix[j][i] = kb.nextInt();
             }
         }
+        String action = kb.next();
+        if (action.equalsIgnoreCase("t")){
+            transpose(Matrix);
+        }
+        else if (action.equalsIgnoreCase("r")){
+            multiply(Matrix);
+        }
+        else if (action.equalsIgnoreCase("c")){
+            minimum(Matrix);
+        }
+        else if (action.equalsIgnoreCase("q")){
+            return;
+        }
+    }
+    public static void transpose(int[][] Matrix){
+
+    }
+    public static void multiply(int[][] Matrix){
+        int product = 1;
+        for (int j = 0; j < Matrix.length; j++) {
+            for (int i = 0; i < Matrix[0].length; i++) {
+                product*= Matrix[j][i];
+            }
+            System.out.print(product+" ");
+            product = 1;
+        }
+    }
+    public static void minimum(int[][] Matrix){
+
     }
 }
