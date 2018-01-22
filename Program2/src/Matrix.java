@@ -14,17 +14,17 @@ public class Matrix {
             }
         }
         String action = kb.next();
-        if (action.equalsIgnoreCase("t")){
-            transpose(Matrix);
-        }
-        else if (action.equalsIgnoreCase("r")){
-            multiply(Matrix);
-        }
-        else if (action.equalsIgnoreCase("c")){
-            minimum(Matrix);
-        }
-        else if (action.equalsIgnoreCase("q")){
-            return;
+        while ((!action.equalsIgnoreCase("q"))) {
+            try {
+                if (action.equalsIgnoreCase("t")) {
+                    transpose(Matrix);
+                } else if (action.equalsIgnoreCase("r")) {
+                    multiply(Matrix);
+                } else if (action.equalsIgnoreCase("c")) {
+                    minimum(Matrix);
+                }
+                action = kb.next();
+            }catch (Exception e){}
         }
     }
     public static void transpose(int[][] Matrix){
