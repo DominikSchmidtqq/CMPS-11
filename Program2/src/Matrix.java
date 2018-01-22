@@ -24,8 +24,53 @@ public class Matrix {
             minimum(Matrix);
         }
         else{}
-        action = kb.next();
+        if (action.equalsIgnoreCase("q")){
+            return;
+        }
+        String action2 = kb.next();
+        if (action2.equalsIgnoreCase("t")) {
+            transpose(Matrix, rows, columns);
+        } else {}
+        if (action2.equalsIgnoreCase("r")) {
+            multiply(Matrix);
+        } else{}
+        if (action2.equalsIgnoreCase("c")) {
+            minimum(Matrix);
+        }
+        else{}
+        if (action2.equalsIgnoreCase("q")){
+            return;
+        }
+        String action3 = kb.next();
+        if (action3.equalsIgnoreCase("t")) {
+            transpose(Matrix, rows, columns);
+        } else {}
+        if (action3.equalsIgnoreCase("r")) {
+            multiply(Matrix);
+        } else{}
+        if (action3.equalsIgnoreCase("c")) {
+            minimum(Matrix);
+        }
+        else{}
+        if (action3.equalsIgnoreCase("q")){
+            return;
+        }
+        String action4 = kb.next();
+        if (action4.equalsIgnoreCase("t")) {
+            transpose(Matrix, rows, columns);
+        } else {}
+        if (action4.equalsIgnoreCase("r")) {
+            multiply(Matrix);
+        } else{}
+        if (action4.equalsIgnoreCase("c")) {
+            minimum(Matrix);
+        }
+        else{}
+        if (action4.equalsIgnoreCase("q")){
+            return;
+        }
     }
+    
     public static void transpose(int[][] Matrix, int rows, int columns){
         int newMatrix[][] = new int[columns][rows];
         for (int j = 0; j < Matrix.length; j++) {
@@ -40,6 +85,7 @@ public class Matrix {
             System.out.println();
         }
     }
+
     public static void multiply(int[][] Matrix){
         int product = 1;
         for (int j = 0; j < Matrix.length; j++) {
@@ -50,6 +96,7 @@ public class Matrix {
             product = 1;
         }
     }
+
     public static void minimum(int[][] Matrix){
         int minimum = Integer.MAX_VALUE;
         for (int i = 0; i < Matrix[0].length; i++) {
