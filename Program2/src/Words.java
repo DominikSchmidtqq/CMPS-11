@@ -16,12 +16,13 @@ public class Words {
                 char check = Words[i].charAt(j);
                 int index1 = Words[i].indexOf(check);
                 int index2 = Words[i].lastIndexOf(check);
-                if (index1 == index2){
-                    if (j==Words[i].length()-1){
-                        notRepeated++;
-
-                    }
+                if (index1 != index2){
+                    break;
                 }
+                if (j==Words[i].length()-1){
+                    notRepeated++;
+                }
+
             }
         }
         System.out.print(notRepeated);
