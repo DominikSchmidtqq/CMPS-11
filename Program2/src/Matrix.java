@@ -70,7 +70,7 @@ public class Matrix {
             return;
         }
     }
-    
+
     public static void transpose(int[][] Matrix, int rows, int columns){
         int newMatrix[][] = new int[columns][rows];
         for (int j = 0; j < Matrix.length; j++) {
