@@ -7,9 +7,15 @@ public class Bingo {
     public Bingo(Player[] players){
         this.players = players;
     }
+    public Bingo(){
+        this(new Player[0]);
+    }
     public String play(int number){
         for (int i = 0; i <players.length; i++){
-            this.markNumber(number);
+            this.players[i].markNumber(number);
+
+            if (this.players[i].isWinner() == true)
+                //return(this.getName());
         }
     }
     public static void main(String[] args){

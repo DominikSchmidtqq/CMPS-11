@@ -1,7 +1,7 @@
 /**
  * Created by domin on 2/5/2018.
  */
-class Card extends Player{
+public class Card {
     int[][] numbers;
     boolean[][] marked;
 
