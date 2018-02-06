@@ -6,8 +6,10 @@ public class Card {
     boolean[][] marked;
 
     Card(int[][] numbers) {
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < 5; j++){
+        this.numbers = new int[numbers.length][numbers.length];
+        this.marked = new boolean[numbers.length][numbers.length];
+        for(int i = 0; i < numbers.length; i++){
+            for(int j = 0; j < numbers[0].length; j++){
                 this.numbers[i][j] = numbers[i][j];
                 this.marked[i][j] = false;
             }

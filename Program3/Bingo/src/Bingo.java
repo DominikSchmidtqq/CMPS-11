@@ -15,8 +15,9 @@ public class Bingo {
             this.players[i].markNumber(number);
 
             if (this.players[i].isWinner() == true)
-                //return(this.getName());
+                return(this.players[i].getName());
         }
+        return "";
     }
     public static void main(String[] args){
         int[][] numbers1 = {{10, 30, 45, 66, 82}, {3, 25, 11, 63, 78},

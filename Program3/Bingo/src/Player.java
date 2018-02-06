@@ -12,8 +12,9 @@ public class Player {
         this("", new Card[0]);
     }
     public String getName(){
-        if (this.isWinner() == true)
+       // if (this.isWinner() == true)
             return this.name;
+        //return "";
     }
     public Card[] getCards(){
         return this.cards;
