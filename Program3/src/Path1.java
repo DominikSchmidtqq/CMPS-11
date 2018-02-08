@@ -1,6 +1,7 @@
+import java.util.Map;
+
 public class Path1 {
     int[] points;
-
     Path1(){
         this( new int[0]);
     }
@@ -35,13 +36,48 @@ public class Path1 {
     void addPath(Path1 p){
         int length = this.points.length + p.points.length;
         int[] newArray = new int[length];
-        for(int i)
+        for(int i = 0; i < this.points.length-1; i++){
+            newArray[i] = this.points[i];
+        }
+        for (int i = 0; i < p.points.length -1; i++){
+            newArray[i+this.points.length-1] = p.points[i];
+        }
+        this.points = newArray;
+    }
+    public double getLength(){
+        double sum = 0;
+        if (this.points.length >=4) {
+            for (int i = 0; i < this.points.length - 3; i += 2) {
+                sum += calculate(this.points[i], this.points[i + 1], this.points[i + 2], this.points[i + 3]);
+            }
+        }
+        return sum;
+    }
+
+    public double getDistance(){
+        return calculate(this.points[0], this.points[1], this.points[this.points.length-2], this.points[this.points.length-1]);
+    }
+    public double calculate(int x1, int y1, int x2, int y2){
+        return Math.hypot(x1-x2, y1-y2);
+    }
+    public boolean isLonger(Path1 p){
+        if (this.getLength() > p.getLength()){
+            return true;
+        }
+        else return false;
     }
     public static void main(String args[]){
         Path1 path = new Path1();
+        Path1 p = new Path1();
+        p.addPoint(0,0);
+        p.addPoint(2,2);
         path.addPoint(0,0);
         path.addPoint(1,1);
-        path.removePoint(1);
-        System.out.println(path.points[1]);
+        path.addPath(p);
+        path.removePoint(3);
+        p.getDistance();
+        System.out.println(p.getLength());
+        System.out.println(path.getLength());
+        System.out.println(path.isLonger(p));
     }
 }
