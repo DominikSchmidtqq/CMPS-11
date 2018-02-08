@@ -4,9 +4,15 @@ public class Path {
     Point[] newArray;
     Path path;
     Path(){
-        this.points = new Point[0];
+        this.points = new Point[1];
+        this.points[0] = new Point(0,0);
     }
     public Path addPoint(int x, int y){
+        Point[] array = new Point[this.points.length+1];
+        for (int i = 0; i < this.points.length; i++){
+            this.points[i] = array[i];
+        }
+        this.points = array;
         this.points[points.length-1] = new Point(x,y);
         return path;
     }
@@ -43,6 +49,7 @@ public class Path {
         return sum;
     }
     public double getDistance(){
+        System.out.println(this.points[0]);
         return this.points[0].distance(this.points[this.points.length-1]);
     }
     boolean isLonger(Path p){
@@ -54,5 +61,7 @@ public class Path {
     public static void main(String args []){
         Path path = new Path();
         path.addPoint(0,0);
+        path.addPoint(1,1);
+        System.out.println(path.getDistance());
     }
 }
