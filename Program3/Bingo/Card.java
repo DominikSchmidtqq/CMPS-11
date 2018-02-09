@@ -33,8 +33,8 @@ public class Card {
     }
 
     public void markNumber(int number) {
-        for(int i = 0; i < 5; i++){
-            for (int j = 0; j < 5; j++){
+        for(int i = 0; i < marked.length; i++){
+            for (int j = 0; j < marked[0].length; j++){
                 if (this.getNumber(i, j) == number&&(this.isMarked(i,j)==false)){
                     this.marked[i][j] = true;
                 }
