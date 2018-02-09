@@ -66,6 +66,12 @@ public class Path1 {
         }
         else return false;
     }
+    public String getPoint(int index){
+        return "("+this.points[index*2-1]+","+this.points[index*2]+")";
+    }
+    public int numOfPoints(){
+        return this.points.length/2;
+    }
     public static void main(String args[]){
         Path1 path = new Path1();
         Path1 p = new Path1();
@@ -76,8 +82,10 @@ public class Path1 {
         path.addPath(p);
         path.removePoint(3);
         p.getDistance();
+        System.out.println(path.getPoint(2));
         System.out.println(p.getLength());
         System.out.println(path.getLength());
         System.out.println(path.isLonger(p));
+        System.out.println(path.numOfPoints());
     }
 }
