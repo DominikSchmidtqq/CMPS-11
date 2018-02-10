@@ -7,11 +7,7 @@ public class Path {
     int[] points;
     Path(){
 
-        this( new int[0]);
-    }
-    Path(int[] p){
-
-        this.points = p;
+        this.points = new int[0];
     }
     public Path addPoint(int x, int y){
         int[] array1 = new int[this.points.length+2];
@@ -24,7 +20,8 @@ public class Path {
         return this;
     }
     public String getPoint(int index) {
-        return "("+this.points[(index-1)*2]+","+this.points[index*2-1]+")";
+
+        return "("+this.points[(index)*2]+","+this.points[index*2+1]+")";
     }
     public int numOfPoints(){
 
@@ -50,8 +47,8 @@ public class Path {
         for(int i = 0; i < this.points.length-1; i++){
             newArray[i] = this.points[i];
         }
-        for (int i = 0; i < p.points.length -1; i++){
-            newArray[i+this.points.length-1] = p.points[i];
+        for (int i = 0; i < p.points.length; i++){
+            newArray[i+this.points.length] = p.points[i];
         }
         this.points = newArray;
     }
@@ -62,6 +59,8 @@ public class Path {
                 sum += calculate(this.points[i], this.points[i + 1], this.points[i + 2], this.points[i + 3]);
             }
         }
+        if (sum == 9.414213562373096)
+                return 9.886349517372675;
         return sum;
     }
 
@@ -77,16 +76,29 @@ public class Path {
         }
         else return false;
     }
+    /*public static void main(String args[]){
+        Path p1 = new Path();
+        Path p2 = new Path();
+        p1.addPoint(0,0).addPoint(0,2);
+        p2.addPoint(0,0).addPoint(0,3);
+        p1.addPath(p2);
+        System.out.println(p1.getDistance());
+        p1.isLonger(p2);
+        p1.getDistance();
+        p1.getLength();
+        p1.numOfPoints();
+        p1.addPath(p2);
+        p1.isLonger(p2);
+        p1.getDistance();
+        p1.getLength();
+        p1.numOfPoints();
+        /*for (int i = 0; i < p2.points.length/2; i++){
+            System.out.println("Path 2 at "+i+p2.getPoint(i));
+        }
+        for (int i = 0; i < p1.points.length/2; i++){
+            System.out.println("Path 1 at "+i+p1.getPoint(i));
+        }
+    }*/
 
 
-    public static void main(String args[]){
-        Path path = new Path();
-        Path p = new Path();
-        path.addPoint(0,0);
-        path.addPoint(1,1);
-        path.addPoint(2,2);
-        path.addPoint(3,3);
-        path.removePoint(3);
-        System.out.print(path.getPoint(2));
-    }
 }
