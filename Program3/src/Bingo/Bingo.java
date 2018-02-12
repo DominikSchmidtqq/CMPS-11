@@ -9,7 +9,6 @@ import java.util.Random;
     /**
      * Created by domin on 2/5/2018.
      */
-import java.util.*;
     public class Bingo {
         String winners ="";
         Player[] players;
@@ -21,14 +20,14 @@ import java.util.*;
         }
         public String play(int number){
             for (int i = 0; i <players.length; i++){
-                this.players[i].markNumber(number);
+                players[i].markNumber(number);
 
-                if (this.players[i].isWinner() == true)
-                    winners = winners + (this.players[i].getName()) +" ";
+                if (players[i].isWinner() == true)
+                    winners = winners + (players[i].getName()) +" ";
             }
             return winners;
         }
-        public static void main(String[] args){
+        /*public static void main(String[] args){
             int[][] numbers1 = {{10, 30, 45, 66, 82}, {3, 25, 11, 63, 78},
                     {22, 4, 13, 46, 90}, {5, 23, 12, 6, 85}, {1, 88, 67, 2, 44}};
             Card[] cards1 = new Card[1];
@@ -48,6 +47,6 @@ import java.util.*;
                 winner = bingo.play(number);
             }
             System.out.println(winner);
-        }
-    }
+        }*/
+}
 
