@@ -83,7 +83,7 @@ public class PathTest {
         // Be sure to only have one scanner object at a time
 
         // Otherwise you can still use the console to enter data
-        Scanner scan = new Scanner(test5);
+        Scanner scan = new Scanner(test2);
 
         Path p1 = new Path();
         Path p2 = new Path();
