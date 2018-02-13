@@ -1,6 +1,6 @@
 # CMPS-11
 
-# CMPS 11 - Assignment 1
+# Assignment 1
 # Problem 1 - Converter (30 points)
   Write a program that helps with converting temperature measured in Fahrenheit or Kelvin to
 Celsius degree. 
@@ -14,7 +14,7 @@ printed boolean variable.
 number of times you need to divide N by 2 until it is strictly less than 1. 
 
 
-# CMPS 11 - Assignment 2
+#  Assignment 2
   # Problem 1 - Series (25 points)
   Write a program that asks user to input two integers. The first integer is the power ,
 and the second is a (positive) number of terms, say . Then calculate the approximation for
@@ -40,7 +40,7 @@ with ’n’ words/strings, each in one line.
 repeated characters.
 
 
-# CMPS 11 - Assignment 3
+#  Assignment 3
   # Bingo.java (60 points)
 We want to write a Java program to simulate a bingo game. Players use cards that
 feature five columns of five cells each, with every cell containing a number between 1 to 90.
