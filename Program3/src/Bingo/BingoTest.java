@@ -39,7 +39,7 @@ public class BingoTest {
       // Be sure to only have one scanner object at a time
 
       // Otherwise you can still use the console to enter data
-      Scanner scan = new Scanner(test7);
+      Scanner scan = new Scanner(test6);
 
       System.out.println("Enter how many players there are");
       Player[] players = new Player[scan.nextInt()];
