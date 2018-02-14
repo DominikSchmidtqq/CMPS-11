@@ -2,7 +2,7 @@
  * Created by domin on 2/5/2018.
  */
 package Bingo;
-public class Card {
+public class Card{
     int[][] numbers;
     boolean[][] marked;
 
