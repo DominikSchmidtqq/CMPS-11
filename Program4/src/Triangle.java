@@ -20,9 +20,10 @@ class Triangle extends Shape{
         return this.thirdPoint;
     }
     public double getPerimeter() {
-        return 0;
+        return this.getFirstPoint().getDistance(getSecondPoint())+ this.getFirstPoint().getDistance(getThirdPoint())+ this.getSecondPoint().getDistance(getThirdPoint());
     }
     public double getArea(){
-        return 0;
+        double s = this.getPerimeter()/2;
+        return (Math.sqrt((s*(s-this.getFirstPoint().getDistance(getSecondPoint())))*(s*(s-this.getFirstPoint().getDistance(getThirdPoint())))*(s*(s-this.getSecondPoint().getDistance(getThirdPoint())))));
     }
 }

@@ -11,10 +11,14 @@ class EquilateralTriangle extends Triangle implements Symmetric{
         return this.topPoint;
     }
     public double getSide(){
-        return this.side;
+        return this.getSide();
     }
     public Point getPointOfSymmetry() {
-        return null;
+        double x1 = 0;
+        double y1 = 0;
+        x1 = (this.getFirstPoint().getX()+this.getSecondPoint().getX()+this.getThirdPoint().getX())/3;
+        y1 = (this.getFirstPoint().getY()+this.getSecondPoint().getY()+this.getThirdPoint().getY())/3;
+        return new Point(x1, y1);
     }
     public double getArea() {
         return super.getArea();

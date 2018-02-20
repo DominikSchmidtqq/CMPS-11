@@ -32,11 +32,22 @@ public class Plane {
         return perimeter;
     }
     public Point getCenterOfPointOfSymmetries(){
-        double x, y, numX, numY;
-        for(int i = 0; i< shapes.length;i++){
-            if(shapes[i] instanceof Symmetric){
+        double x = 0;
+        double y = 0;
+        double numX = 0;
+        double numY = 0;
+        for(Shape s : shapes){
+            if(s instanceof Symmetric){
+                x+=((Symmetric) s).getPointOfSymmetry().getX();
+                y+= ((Symmetric) s).getPointOfSymmetry().getY();
+                numX++;
+                numY++;
             }
         }
-        return null;
+        if (numX >0){
+            return new Point((x/numX), (y/numY));
+        }
+        else
+            return null;
     }
 }

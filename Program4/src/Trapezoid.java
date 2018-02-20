@@ -25,9 +25,18 @@ class Trapezoid extends Shape {
         return this.bottomSide;
     }
     public double getArea() {
-        return 0;
+        return ((this.getTopSide()+this.getBottomSide())/2*(this.getTopLeftPoint().getY()-this.getBottomLeftPoint().getY()));
     }
     public double getPerimeter() {
-        return 0;
+        //topleft bottomleft
+        //this.getTopLeftPoint().getDistance(this.getBottomLeftPoint())
+        //topSide
+        //this.getTopSide()
+        //bottomside
+        //this.getBottomSide()
+        //endpoints
+        Point endPointTop = new Point(this.getTopLeftPoint().getX()+getTopSide(), this.getTopLeftPoint().getY());
+        Point endPointBottom = new Point(this.getBottomLeftPoint().getX()+this.getBottomSide(), this.getBottomLeftPoint().getY());
+        return (this.getTopLeftPoint().getDistance(this.getBottomLeftPoint())+this.getTopSide()+this.getBottomSide()+ endPointTop.getDistance(endPointBottom));
     }
 }

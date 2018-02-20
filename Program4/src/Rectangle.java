@@ -20,9 +20,9 @@ class Rectangle extends Shape{
         return this.width;
     }
     public double getPerimeter(){
-        return 0;
+        return (2*this.getLength()+2*this.getWidth());
     }
     public double getArea(){
-        return 0;
+        return (this.getLength()*this.getWidth());
     }
 }

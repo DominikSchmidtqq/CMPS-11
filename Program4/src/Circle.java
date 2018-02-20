@@ -15,10 +15,10 @@ class Circle extends Shape implements Symmetric{
         return this.radius;
     }
     public double getPerimeter() {
-        return 0;
+        return (2*Math.PI*this.getRadius());
     }
     public double getArea() {
-        return 0;
+        return (Math.PI*this.getRadius()*this.getRadius());
     }
     public Point getPointOfSymmetry() {
         return this.getCenter();

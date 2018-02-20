@@ -1,7 +1,7 @@
 /**
  * Created by domin on 2/19/2018.
  */
-class Square extends  Rectangle implements Symmetric{
+class Square extends Rectangle implements Symmetric{
     Point topLeft;
     double side;
     public Square(Point topLeft, double side){
@@ -17,6 +17,6 @@ class Square extends  Rectangle implements Symmetric{
         return super.getPerimeter();
     }
     public Point getPointOfSymmetry() {
-        return null;
+        return new Point(this.topLeft.getX()+this.getSide()/2, this.topLeft.getY()-this.getSide()/2);
     }
 }
