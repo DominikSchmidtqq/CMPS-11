@@ -35,7 +35,6 @@ public class Plane {
         double x, y, numX, numY;
         for(int i = 0; i< shapes.length;i++){
             if(shapes[i] instanceof Symmetric){
-                shapes[i].
             }
         }
         return null;
