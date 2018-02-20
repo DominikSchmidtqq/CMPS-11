@@ -25,7 +25,4 @@ class Rectangle extends Shape{
     public double getArea(){
         return 0;
     }
-    public Point getPointOfSymmetry() {
-        return null;
-    }
 }

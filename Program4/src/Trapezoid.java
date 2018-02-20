@@ -30,7 +30,4 @@ class Trapezoid extends Shape {
     public double getPerimeter() {
         return 0;
     }
-    public Point getPointOfSymmetry() {
-        return null;
-    }
 }
