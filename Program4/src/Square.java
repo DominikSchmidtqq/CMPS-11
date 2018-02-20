@@ -17,6 +17,10 @@ class Square extends Rectangle implements Symmetric{
         return super.getPerimeter();
     }
     public Point getPointOfSymmetry() {
-        return new Point(this.topLeft.getX()+this.getSide()/2, this.topLeft.getY()-this.getSide()/2);
+        double xS,yS;
+        xS = this.getTopLeftPoint().getX()+(this.getSide()/2);
+        yS = this.getTopLeftPoint().getY() - (this.getSide()/2);
+        Point symmetric = new Point(xS, yS);
+        return symmetric;
     }
 }

@@ -23,7 +23,13 @@ class Triangle extends Shape{
         return this.getFirstPoint().getDistance(getSecondPoint())+ this.getFirstPoint().getDistance(getThirdPoint())+ this.getSecondPoint().getDistance(getThirdPoint());
     }
     public double getArea(){
+        double area = 0;
         double s = this.getPerimeter()/2;
-        return (Math.sqrt((s*(s-this.getFirstPoint().getDistance(getSecondPoint())))*(s*(s-this.getFirstPoint().getDistance(getThirdPoint())))*(s*(s-this.getSecondPoint().getDistance(getThirdPoint())))));
+        double side1 = this.getFirstPoint().getDistance(this.getSecondPoint());
+        double side2 = this.getSecondPoint().getDistance(this.getThirdPoint());
+        double side3 = this.getThirdPoint().getDistance(this.getFirstPoint());
+        area = Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
+        return area;
+        //return (Math.sqrt((s*(s-this.getFirstPoint().getDistance(getSecondPoint())))*(s*(s-this.getFirstPoint().getDistance(getThirdPoint())))*(s*(s-this.getSecondPoint().getDistance(getThirdPoint())))));
     }
 }

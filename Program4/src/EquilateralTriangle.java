@@ -6,12 +6,14 @@ class EquilateralTriangle extends Triangle implements Symmetric{
     double side;
     public EquilateralTriangle(Point topPoint, double side){
         super(topPoint, new Point(topPoint.getX()+side, topPoint.getY()), new Point(topPoint.getX()-side, topPoint.getY()));
+        this.topPoint = topPoint;
+        this.side = side;
     }
     public Point getTopPoint(){
         return this.topPoint;
     }
     public double getSide(){
-        return this.getSide();
+        return this.side;
     }
     public Point getPointOfSymmetry() {
         double x1 = 0;
