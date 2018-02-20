@@ -290,7 +290,7 @@ public class PlaneTest {
 			
 	
 	public static void main(String[] args) {
-	    Scanner scan = new Scanner(System.in);
+	    Scanner scan = new Scanner(test1);
 	    Point p1;
 	    Point p2;
 	    Point p3;
