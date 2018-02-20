@@ -4,7 +4,7 @@
 public class Plane {
     Shape[] shapes;
     public Plane(){
-        new Plane();
+        shapes = new Shape[0];
     }
     public Shape[] getShape(){
         return this.shapes;
@@ -14,13 +14,17 @@ public class Plane {
         for(int i = 0; i < shapes.length; i++){
             shapes[i] = temp[i];
         }
-        temp[shapes.length] = shape;
-        shapes = temp;
+        this.shapes = temp;
+        shapes[shapes.length-1] = shape;
+
     }
     public double getSumOfAreas(){
         double area = 0;
-        for (int i = 0; i < shapes.length; i++){
+        /*for (int i = 0; i < shapes.length; i++){
             area += shapes[i].getArea();
+        }*/
+        for(Shape s : shapes){
+            area += s.getArea();
         }
         return area;
     }
