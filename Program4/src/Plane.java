@@ -49,7 +49,8 @@ public class Plane {
             }
         }
         if (numX >0){
-            return new Point((x/numX), (y/numY));
+            Point SymmetricCenter = new Point((x/numX), (y/numY));
+            return SymmetricCenter;
         }
         else
             return null;

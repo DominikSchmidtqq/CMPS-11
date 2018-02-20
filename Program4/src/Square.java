@@ -6,6 +6,7 @@ class Square extends Rectangle implements Symmetric{
     double side;
     public Square(Point topLeft, double side){
         super(topLeft, side,side);
+        this.side = side;
     }
     public double getSide(){
         return this.side;

@@ -5,7 +5,7 @@ class EquilateralTriangle extends Triangle implements Symmetric{
     Point topPoint;
     double side;
     public EquilateralTriangle(Point topPoint, double side){
-        super(topPoint, new Point(topPoint.getX()+side, topPoint.getY()), new Point(topPoint.getX()-side, topPoint.getY()));
+        super(topPoint, new Point(topPoint.getX()-side/2, (topPoint.getY()- Math.sqrt(((side*side) - (side/2)*(side/2))))), new Point(topPoint.getX()+side/2, (topPoint.getY()-Math.sqrt(((side*side) - (side/2)*(side/2))))));
         this.topPoint = topPoint;
         this.side = side;
     }
