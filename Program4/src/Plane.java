@@ -12,7 +12,7 @@ public class Plane {
     public void addShape(Shape shape){
         Shape[] temp = new Shape[shapes.length+1];
         for(int i = 0; i < shapes.length; i++){
-            shapes[i] = temp[i];
+            temp[i] = shapes[i];
         }
         this.shapes = temp;
         shapes[shapes.length-1] = shape;
