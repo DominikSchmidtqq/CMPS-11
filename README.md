@@ -1,25 +1,25 @@
 # CMPS-11
 
 # Assignment 1
-# Problem 1 - Converter.java (30 points)
+# Converter.java (30 points)
   Write a program that helps with converting temperature measured in Fahrenheit or Kelvin to
 Celsius degree. 
-# Problem 2 - Ordered.java (35 points)
+# Ordered.java (35 points)
   Write a program that reads in three integers from console, x, y, and z. Then, define
 a boolean variable whose value is true if the three values are either in strictly ascending order
 (x < y < z) or in strictly descending order (x > y > z), and false otherwise. Your output is the
 printed boolean variable.
-# Problem 3 - Bits.java (35 points)
+# Bits.java (35 points)
   Write a program that takes an integer from console, N, and uses a while loop to compute the
 number of times you need to divide N by 2 until it is strictly less than 1. 
 
 
 #  Assignment 2
-  # Problem 1 - Series.java (25 points)
+  # Series.java (25 points)
   Write a program that asks user to input two integers. The first integer is the power ,
 and the second is a (positive) number of terms, say . Then calculate the approximation for
 by evaluating the first terms of the above series.
-  # Problem 2 - Matrix.java (40 points)
+  # Matrix.java (40 points)
 Write a program that receives “m” and “n” as the number of rows and columns of a
 matrix, respectively. Then it follows by “m” lines of input from the user, each referring to “n”
 integers in each row of the matrix.
@@ -31,7 +31,7 @@ one line, separated by space.
   ❖ C: ColumnMin - finds the smallest value in each of the columns and prints the
 results in one line, separated by space.
   ❖ Q: Quit - stops reading commands from the user.
-  # Problem 3 - Words.java (35 points)
+  # Words.java (35 points)
 We want to find out how many words in our list of words do not have any repeated
 characters. 
   ❖ Input: An integer ’n’ indicating the number of words in our list. Then, it follows
