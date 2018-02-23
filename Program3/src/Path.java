@@ -4,8 +4,8 @@ import static java.lang.Math.*;
  * Created by domin on 2/10/2018.
  */
 public class Path{
-    int[] points;
-    Path(){
+    private int[] points;
+    private Path(){
         this.points = new int[0];
     }
 

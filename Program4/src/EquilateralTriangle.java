@@ -2,8 +2,8 @@
  * Created by domin on 2/19/2018.
  */
 class EquilateralTriangle extends Triangle implements Symmetric{
-    Point topPoint;
-    double side;
+    private Point topPoint;
+    private double side;
     public EquilateralTriangle(Point topPoint, double side){
         super(topPoint, new Point(topPoint.getX()-side/2, (topPoint.getY()- Math.sqrt(((side*side) - (side/2)*(side/2))))), new Point(topPoint.getX()+side/2, (topPoint.getY()-Math.sqrt(((side*side) - (side/2)*(side/2))))));
         this.topPoint = topPoint;

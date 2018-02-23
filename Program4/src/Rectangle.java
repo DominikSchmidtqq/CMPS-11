@@ -2,9 +2,9 @@
  * Created by domin on 2/19/2018.
  */
 class Rectangle extends Shape{
-    Point topLeftPoint;
-    double length;
-    double width;
+    private Point topLeftPoint;
+    private double length;
+    private double width;
     public Rectangle(Point topLeftPoint, double length, double width){
         this.topLeftPoint = topLeftPoint;
         this.length = length;

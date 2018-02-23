@@ -2,8 +2,8 @@
  * Created by domin on 2/19/2018.
  */
 class Circle extends Shape implements Symmetric{
-    Point center;
-    double radius;
+    private Point center;
+    private double radius;
     public Circle(Point center, double radius){
         this.center = center;
         this.radius = radius;

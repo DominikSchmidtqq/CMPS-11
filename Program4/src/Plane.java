@@ -2,7 +2,7 @@
  * Created by domin on 2/19/2018.
  */
 public class Plane {
-    Shape[] shapes;
+    private Shape[] shapes;
     public Plane(){
         shapes = new Shape[0];
     }
@@ -20,9 +20,6 @@ public class Plane {
     }
     public double getSumOfAreas(){
         double area = 0;
-        /*for (int i = 0; i < shapes.length; i++){
-            area += shapes[i].getArea();
-        }*/
         for(Shape s : shapes){
             area += s.getArea();
         }

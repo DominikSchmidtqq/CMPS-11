@@ -2,9 +2,9 @@
  * Created by domin on 2/19/2018.
  */
 class Triangle extends Shape{
-    Point firstPoint;
-    Point secondPoint;
-    Point thirdPoint;
+    private Point firstPoint;
+    private Point secondPoint;
+    private Point thirdPoint;
     public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint){
         this.firstPoint = firstPoint;
         this.secondPoint = secondPoint;
@@ -30,6 +30,5 @@ class Triangle extends Shape{
         double side3 = this.getThirdPoint().getDistance(this.getFirstPoint());
         area = Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
         return area;
-        //return (Math.sqrt((s*(s-this.getFirstPoint().getDistance(getSecondPoint())))*(s*(s-this.getFirstPoint().getDistance(getThirdPoint())))*(s*(s-this.getSecondPoint().getDistance(getThirdPoint())))));
     }
 }
