@@ -1,12 +1,13 @@
 /**
  * Created by domin on 2/19/2018.
  */
-class Square extends Rectangle implements Symmetric{
+class Square extends Rectangle implements Symmetric {
     Point topLeft;
     double side;
     public Square(Point topLeft, double side){
         super(topLeft, side,side);
         this.side = side;
+        this.topLeft = topLeft;
     }
     public double getSide(){
         return this.side;

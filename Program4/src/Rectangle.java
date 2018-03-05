@@ -1,7 +1,7 @@
 /**
  * Created by domin on 2/19/2018.
  */
-class Rectangle extends Shape{
+class Rectangle extends Shape {
     Point topLeftPoint;
     double length;
     double width;

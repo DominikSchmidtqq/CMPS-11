@@ -1,7 +1,7 @@
 /**
  * Created by domin on 2/19/2018.
  */
-class Circle extends Shape implements Symmetric{
+class Circle extends Shape implements Symmetric {
     Point center;
     double radius;
     public Circle(Point center, double radius){

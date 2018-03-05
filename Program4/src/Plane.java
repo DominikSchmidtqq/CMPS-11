@@ -4,7 +4,7 @@
 public class Plane {
     Shape[] shapes;
     public Plane(){
-        shapes = new Shape[0];
+        this.shapes = new Shape[0];
     }
     public Shape[] getShape(){
         return this.shapes;

@@ -1,7 +1,7 @@
 /**
  * Created by domin on 2/19/2018.
  */
-class EquilateralTriangle extends Triangle implements Symmetric{
+class EquilateralTriangle extends Triangle implements Symmetric {
     Point topPoint;
     double side;
     public EquilateralTriangle(Point topPoint, double side){

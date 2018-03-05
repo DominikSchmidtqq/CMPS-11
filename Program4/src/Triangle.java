@@ -1,7 +1,7 @@
 /**
  * Created by domin on 2/19/2018.
  */
-class Triangle extends Shape{
+class Triangle extends Shape {
     Point firstPoint;
     Point secondPoint;
     Point thirdPoint;
