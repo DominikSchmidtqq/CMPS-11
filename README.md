@@ -52,5 +52,16 @@ In this question we want to implement a class to simulate a 2D path composed of
 multiple 2D points. 
 
 # Assignment 4
-# Plane (100 points)
+# Plane.java (100 points)
 We want to write a Java program to implement classes and methods for geometrical shapes using inheritance and polymorphism. 
+
+# Assignment 5
+# Calculator.java (50 points)
+Write a program that simulates a very simple, but unconventional, calculator. The
+application’s GUI should include two text fields F1 and F2 for numerical input and a label
+for output.
+# Listener.java (50 points)
+Write an application with a GUI that displays a button labeled reverse and two text
+fields. The first text field accepts a string, and the second displays the string in reverse. The
+reverse string should be displayed either when the cursor is in the first text field and
+the Enter key is pressed, or when the reverse button is clicked.
