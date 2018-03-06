@@ -21,17 +21,30 @@ public class Listener implements ActionListener, KeyListener, MouseListener{
         second.setEditable(false);
 
         reverse.addActionListener(this);
+
         first.addActionListener(this);
-        second.addActionListener(this);
         first.addKeyListener(this);
         first.addMouseListener(this);
+
+        second.addActionListener(this);
+
+        rev.addKeyListener(this);
+        rev.setFocusable(true);
         rev.add(reverse);
         rev.add(first);
         rev.add(second);
-        rev.setSize(300,300);
+        rev.setSize(300,400);
+        rev.setResizable(false);
         rev.setLayout(null);
         rev.setVisible(true);
         rev.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        while(true) {
+            System.out.println(mouse+ ""+" "+ enter);
+            if(enter && mouse) {
+                second.setText(reve());
+            }
+        }
     }
 
     public String reve() {
@@ -49,26 +62,30 @@ public class Listener implements ActionListener, KeyListener, MouseListener{
     }
 
     public void actionPerformed(ActionEvent e) {
-
         if(e.getSource() == reverse) {
             second.setText(reve());
         }
     }
-    public void keyPressed(KeyEvent a) {
-        if(a.getKeyCode() == 13){
+
+    public void keyPressed(KeyEvent e) {
+        if(e.getKeyCode() == 10) {
             enter = true;
-            second.setText(reve());
         }
     }
 
     public void keyReleased(KeyEvent e) {
+        if(e.getKeyCode() == 10) {
+            enter = false;
+        }
     }
 
-    public void keyTyped(KeyEvent e) {
-
+    public void mouseEntered(MouseEvent e) {
+        mouse = true;
     }
-    public static void main(String args[]) {
-        new Listener();
+
+    public void mouseExited(MouseEvent e) {
+        mouse = false;
+
     }
 
     public void mouseClicked(MouseEvent e) {
@@ -83,12 +100,11 @@ public class Listener implements ActionListener, KeyListener, MouseListener{
 
     }
 
-    public void mouseEntered(MouseEvent e) {
-        mouse = true;
-        second.setText(reve());
+    public void keyTyped(KeyEvent e) {
+
     }
 
-    public void mouseExited(MouseEvent e) {
-
+    public static void main(String args[]) {
+        new Listener();
     }
 }
